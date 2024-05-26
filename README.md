@@ -1,5 +1,7 @@
 # DNA Sequence Reconstruction from CSV Files
 
+**Author: [Mohamadreza Hooshmandzadeh]**<br>
+**Studentnumber: [2366713]**
 ## Overview
 In this project, we process raw CSV files containing DNA sequences and, if a valid DNA sequence can be constructed, we save it in a text file. The process involves several steps, including reading the file, cleaning the data, generating sequences, constructing a graph, and finding an Eulerian path if it exists. Below are the detailed steps and examples for each stage:
 
