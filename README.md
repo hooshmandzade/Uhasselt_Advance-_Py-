@@ -347,10 +347,48 @@ data frame as below:<br>
  - output: a Multi directed graoh object
 ## 5. plot the graph
 - input: graph object from last step 
-- output: saved png file 
+- output: saved png file <br>
+
   ![Alt text](https://github.com/hooshmandzade/Uhasselt_Advance-_Py-/blob/main/DNA_3_3.png)
 
- 
+## 6. Check validity of graph (existance of Eulerian path)
+- input: graph object from step 4
+- output: `True` if graph has an Eulerian path, `False` otherwise
+
+## 7. Finding the Eulerian Path and Constructing the DNA Sequence
+- input: graph object from step 4
+- if output of step 6 would be `True`:
+  - output: print eulerian path on terminal output as below<br>
+    [('GG', 'GG'), ('GG', 'GT'), ('GT', 'TT'), ('TT', 'TT'), ('TT', 'TG'), ('TG', 'GG')]
+  - save the DNA sequence constructed from above path in a txt file named DNA_3_3 as below:
+    "GGGTTTGG"
+- if output of step 6 would be False, save `The DNA sequence can not be constructed!` in the txt file named DNA_3_3
+
+### Challenges
+Most challenging part for me was finding the Eulerian path using a DFS, I changed my code several times and test and compare its output every time with nx prepared algorithm for eulerian path generation. Furthermore, there was another challenging part in plotting graph to show the edegs perfectly since if there are more than 1 edge between 2 nodes, its tricky to show them separatly, so I used an option in nx.draw called `connectionstyle` and using a dummy index generator pass different radios to each edge and finally was successful to discreminate between them.
+
+### Tests Description
+## Test cases
+**Cleaning test based on missing value conditions in the project description**<br>
+- Remove the redundant records 
+- Remove perfectly duplicate segment even if the segment number is different
+- Remove records wich has both conditions above at the same time <br>
+**Geberate sequence test**<br>
+- Generate json output including each segment sequence for 2 different segments consisting 2 neuclodes.
+- Generate json output including each segment sequence for 2 different segments consisting neuclodes with different lengths.
+- Generate json output including each segment sequence for 3 different segments consisting neuclodes with different lengths.<br>
+**test_construct_graph**<br>
+Constructing De Bruijn graph and checking its edges with what is expected. in these cases I tested 3 graphs with different number of segments and 3 and 5 mers as k factor and checked the edges with what is expected.
+**test_is_valid_graph**<br>
+testing different graphs existance an eulerian path also there is a case which does not have a eulerian path. and they should be behave as we expected.
+**test_construct_dna_sequence**<br>
+testing construction of a DNA from a given list of pathes. so the expected values are generated based on eulerian cycle algoritm. I checked cases with self edges on a given node, multiple edges between 2 nodes and longer pathes to check any possible bug for instance if we dont test multiple nodes it may be the case that there is an error when dfs wants to choose a path between multipe outgoing edges from a single node.
+
+  
+
+
+
+
 
 
 

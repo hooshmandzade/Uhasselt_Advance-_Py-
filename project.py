@@ -1,3 +1,7 @@
+"""
+author: [Mohamadreza Hooshmandzadeh]
+studentnumber: [2366713]
+"""
 import pandas as pd
 import os
 import json

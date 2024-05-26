@@ -1,3 +1,8 @@
+"""
+author: [Mohamadreza Hooshmandzadeh]
+studentnumber: [2366713]
+"""
+
 from project import clean_data, generate_sequences, is_valid_graph, construct_dna_sequence, construct_graph
 from pytest import mark
 import pandas as pd
