@@ -344,7 +344,12 @@ data frame as below:<br>
  ```
  ## 4. construct De Bruijn graph
  - input: json object from last step, k from step 1
- - output: 
+ - output: a Multi directed graoh object
+## 5. plot the graph
+- input: graph object from last step 
+- output: saved png file 
+  ![Alt text](https://github.com/hooshmandzade/Uhasselt_Advance-_Py-/blob/main/DNA_3_3.png)
+
  
 
 
